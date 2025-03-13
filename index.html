@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONA fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+        document.addEventListener("click", function(event) {
+            let navMenu = document.getElementById("nav-menu");
+            let menuToggle = document.querySelector(".menu-toggle");
+            if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+
+        let slideIndex = 0;
+        function startSlideshow(container) {
+        let slides = container.querySelectorAll("img");
+        let slideIndex = 0;
+
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add("active");
+        }
+
+        setInterval(showSlides, 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".slideshow-container").forEach(container => {
+            startSlideshow(container);
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    let titles = document.querySelectorAll(".section-title");
+
+    function checkScroll() {
+        let triggerBottom = window.innerHeight * 0.9; // Kada naslov dođe na 90% visine ekrana
+
+        titles.forEach(title => {
+            let titleTop = title.getBoundingClientRect().top;
+            if (titleTop < triggerBottom) {
+                title.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Pokreni proveru odmah na učitavanju
+});
+    </script>
+</head>
+<body>
+    <header>
+
+        <img src="slika3.png" alt="MONA fashion logo" class="logo">
+        <h1>MONA FASHION</h1>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+        <nav id="nav-menu">
+           
+            <a href="#komplet1">Kompleti</a>
+            <a href="#helanke1">Helanke</a>
+            <a href="#topovi1">Topovi</a>
+            <a href="#sorcevi">Šorcevi</a>
+            <a href="#jakne1">Jakne</a>
+            <a href="#kombinezoni1">Kombinezoni</a>
+            <a href="#kupacikostimi1">Kupaći kostimi</a>
+            <a href="#narucivanje">Kako naručiti</a>
+            <a href="#kontakt">Kontakt</a>
+            
+        </nav>
+    </header>
+    
+    <section id="pocetna">
+        <div class="hero">
+            <h2></h2>
+            <p></p>
+        </div>
+    </section>
+
+    <section id="narucivanje">
+        <h2 class="section-title">Kako naručiti?</h2>
+        <p class="section-title">Izaberite model i kontaktirajte nas putem instagrama, broja telefona ili e-maila.</e-mejla>.</p>
+        <button class="kontakt-dugme" onclick="location.href='#kontakt'">PORUČI</button>
+    </section>
+    
+
+    
+            <section id="komplet1">
+                <h2 class="section-title">Kompleti</h2>
+             
+                
+                <div class="slideshow-container">
+                    <img src="slika3.jpeg" class="active">
+                    <img src="slika1slika.jpeg">
+                    <img src="slika22.jpeg">
+                    <img src="slika44.jpeg">
+                  
+                </div>
+              
+                <p class="opis">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp;Cijena:60 KM</p>
+                
+            </section>
+            
+            <section id="komplet2">
+                
+            
+                <div class="slideshow-container">
+                    <img src="nn1.jpeg" class="active">
+                    <img src="nn2.jpeg">
+                    <img src="nn3.jpeg">
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:60 KM</p>
+                
+            </section>
+
+            <section id="komplet3">
+                
+            
+                <div class="slideshow-container">
+                    <img src="p1.jpeg" class="active">
+                    <img src="p2.jpeg">
+                    
+                    <img src="p4.jpeg">
+                    
+                    <img src="p6.jpeg">
+                    <img src="p7.jpeg">
+                    <img src="p8.jpeg">
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp;Cijena:60 KM</p>
+                
+            </section>
+
+            <section id="komplet4">
+                
+            
+                <div class="slideshow-container">
+                    <img src="pp1.jpeg" class="active">
+                    <img src="pp2.jpeg">
+                 
+                    
+                </div>
+               
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:60 KM</p>
+                
+            </section>
+
+            <section id="komplet5">
+                
+            
+                <div class="slideshow-container">
+                    <img src="pppp1.jpeg" class="active">
+                    
+                    <img src="pppp2.jpeg">
+                    
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:60 KM</p>
+                
+            </section>
+
+
+            <section id="komplet6">
+                
+            
+                <div class="slideshow-container">
+                    <img src="w1.jpeg" class="active">
+                    <img src="w2.jpeg">
+                    <img src="w3.jpeg">
+                    
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:60 KM</p>
+                
+            </section>
+
+            <section id="komplet7">
+                
+            
+                <div class="slideshow-container">
+                    <img src="h1.jpeg" class="active">
+                    <img src="h2.jpeg">
+                    
+                    <img src="h4.jpeg">
+                  
+                    <img src="h6.jpeg">
+
+                    
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:60 KM</p>
+                
+            </section>
+
+
+
+            <section id="komplet8">
+                
+            
+                <div class="slideshow-container">
+                    <img src="ppppp1.jpeg" class="active">
+                    <img src="ppppp2.jpeg">
+                    <img src="ppppp3.jpeg">
+                    <img src="ppppp4.jpeg">
+                 
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cijena:50 KM</p>
+                
+            </section>
+
+            <section id="komplet9">
+                
+            
+                <div class="slideshow-container">
+                    <img src="oo1.jpeg" class="active">
+                    <img src="oo2.jpeg">
+                    <img src="oo3.jpeg">
+                    <img src="oo4.jpeg">
+                 
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:50 KM</p>
+                
+            </section>
+
+
+
+
+            <section id="komplet10">
+                
+            
+                <div class="slideshow-container">
+                    <img src="ppp1.jpeg" class="active">
+                    <img src="ppp2.jpeg">
+                   
+                    <img src="ppp4.jpeg">
+                    
+                    <img src="ppp6.jpeg">
+                    
+                    <img src="ppp8.jpeg">
+                 
+                    
+                </div>
+                
+                <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:50 KM</p>
+                
+            </section>
+    
+
+
+
+            
+
+
+
+    <section id="helanke1">
+        <h2 class="section-title">Helanke</h2>
+       
+        
+        <div class="slideshow-container">
+            <img src="slikam1.jpeg"active">
+            <img src="slikam2.jpeg">
+            <img src="slikam3.jpeg">
+            <img src="slikam4.jpeg">
+        </div>
+      
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp; Cijena:35 KM</p>
+        
+    </section>
+    
+    <section id="helanke2"></h2>
+    
+        <div class="slideshow-container">
+            <img src="slikam5.jpeg" class="active">
+            <img src="slikam6.jpeg">
+            <img src="slikam7.jpeg">
+            <img src="slikam8.jpeg">
+        </div>
+      
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp; Cijena: 35 KM</p>
+        
+    </section>
+
+    <section id="helanke3"></h2>
+    
+        <div class="slideshow-container">
+            <img src="i1.jpeg" class="active">
+            <img src="i2.jpeg">
+            <img src="i3.jpeg">
+       </div>
+      
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp;Cijena: 35 KM</p>
+        
+    </section>
+
+ <section id="helanke4"></h2>
+    
+        <div class="slideshow-container">
+            <img src="a1.jpeg" class="active">
+            <img src="a2.jpeg">
+            <img src="a3.jpeg">
+            <img src="a4.jpeg">
+        </div>
+      
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cijena: 35 KM</p>
+        
+    </section>
+
+
+
+    <section id="helanke5">
+       
+    
+        <div class="slideshow-container">
+            <img src="slikam9.jpeg" class="active">
+            <img src="slikam10.jpeg">
+            <img src="slikam11.jpeg">
+            
+        </div>
+       
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp; Cijena: 35 KM</p>
+        
+    </section>
+
+    <section id="helanke6">
+       
+    
+        <div class="slideshow-container">
+            <img src="slikam13.jpeg" class="active">
+            <img src="slikam14.jpeg">
+            <img src="slikam15.jpeg">
+            
+        </div>
+       
+        <p class="opis1">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp;Cijena:35 KM</p>
+        
+    </section>
+
+
+    <section id="topovi1">
+        <h2 class="section-title">Topovi</h2>
+        
+        
+        <div class="slideshow-container">
+            <img src="slikamm1.jpeg" class="active">
+            <img src="slikamm2.jpeg">
+            <img src="slikamm3.jpeg">
+            <img src="slikamm4.jpeg">
+        </div>
+      
+        <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp;Cijena:25KM</p>
+        <p class></p>
+    </section>
+    
+    <section id="topovi2">
+        
+    
+        <div class="slideshow-container">
+            <img src="u1.jpeg" class="active">
+            <img src="u2.jpeg">
+         
+        </div>
+       
+        <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp;Cijena:25KM</p>
+    </section>
+
+    <section id="topovi3">
+    
+        <div class="slideshow-container">
+            <img src="e1.jpeg" class="active">
+            <img src="e2.jpeg">
+            <img src="e3.jpeg">
+            
+        </div>
+       
+        <p class="opis">Veličine: S, M, L&nbsp;&nbsp;&nbsp;&nbsp;Cijena:25KM</p>
+        <p class="opis"></p>
+    </section>
+
+    <section id="topovi4">
+       
+    
+        <div class="slideshow-container">
+            <img src="v1.jpeg" class="active">
+            <img src="v2.jpeg">
+            <img src="v3.jpeg">
+
+        </div>
+       
+        <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:25 KM</p>
+    </section>
+
+
+    <section id="topovi5">
+       
+    
+        <div class="slideshow-container">
+            <img src="x1.jpeg" class="active">
+            <img src="x2.jpeg">
+            <img src="x3.jpeg">
+
+        </div>
+        
+        <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:30 KM</p>
+    </section>
+
+
+    <section id="sorcevi">
+        <h2 class="section-title">Šorcevi</h2>
+       
+        
+        <div class="slideshow-container">
+            <img src="tt1.jpeg" class="active">
+            
+            <img src="tt3.jpeg">
+            
+            <img src="tt5.jpeg">
+            
+            <img src="tt7.jpeg">
+            
+            <img src="tt9.jpeg">
+            
+           
+        </div>
+        <p class="opis1">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:27 KM</p>
+    </section>
+    
+    <section id="sorcevi2">
+        
+    
+        <div class="slideshow-container">
+            <img src="tt11.jpeg" class="active">
+            
+            <img src="tt13.jpeg">
+           
+            <img src="tt15.jpeg">
+            
+            <img src="tt17.jpeg">
+            
+            <img src="tt19.jpeg">
+            
+           
+           
+            
+        </div>
+       
+        <p class="opis1">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:27 KM</p>
+    </section>
+
+
+    
+    <section id="jakne1">
+        <h2 class="section-title">Jakne</h2>
+       
+        
+        <div class="slideshow-container">
+            <img src="t1.jpeg" class="active">
+            <img src="t2.jpeg">
+            <img src="t3.jpeg">
+           
+        </div>
+        
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp; Cijena:40 KM</p>
+    </section>
+    
+    <section id="jakne2">
+        
+    
+        <div class="slideshow-container">
+            <img src="t4.jpeg" class="active">
+            <img src="t5.jpeg">
+            <img src="t6.jpeg">
+            
+        </div>
+       
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;; Cijena:40 KM</p>
+    </section>
+
+    <section id="jakne3">
+        
+    
+        <div class="slideshow-container">
+            <img src="t7.jpeg" class="active">
+            <img src="t8.jpeg">
+            <img src="t9.jpeg">
+          
+        </div>
+        
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:40 KM</p>
+    </section>
+
+    <section id="jakne4">
+       
+    
+        <div class="slideshow-container">
+            <img src="t10.jpeg" class="active">
+            <img src="t11.jpeg">
+            <img src="t12.jpeg">
+            
+        </div>
+     
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp; Cijena:40 KM</p>
+    </section>
+
+
+    <section id="kombinezoni1">
+        <h2 class="section-title">Kombinezoni</h2>
+       
+        
+        <div class="slideshow-container">
+            <img src="b2.jpeg" class="active">
+          
+            <img src="b3.jpeg">
+            
+            <img src="b5.jpeg">
+            
+            <img src="b7.jpeg">
+           <img src="b8.jpeg">
+            
+            
+          
+            
+            <img src="b13.jpeg">
+           
+        </div>
+       
+        <p class="opis">Veličine: S, M, L &nbsp;&nbsp;&nbsp;&nbsp; Cijena:55 KM</p>
+    </section>
+
+
+    <section id="kupacikostimi1">
+        <h2 class="section-title">Kupaci kostimi</h2>
+        
+        <div class="slideshow-container">
+            <img src="s2.jpeg" class="active">
+            
+            <img src="s3.jpeg">
+           
+            <img src="s5.jpeg">
+           
+            <img src="s7.jpeg">
+            
+            <img src="s10.jpeg">
+            
+            <img src="s12.jpeg">
+        </div>
+        <p class="opis"></p>
+        <p class="opis">Veličine:S, M, L, XL&nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+    
+    <section id="kupacikostimi2">
+        
+    
+        <div class="slideshow-container">
+            <img src="m1.jpeg" class="active">
+           
+            <img src="m3.jpeg">
+           
+            <img src="m5.jpeg">
+           
+            <img src="m7.jpeg">
+           
+        </div>
+       
+        <p class="opis">Veličine: S, M, L, XL&nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi3">
+        
+    
+        <div class="slideshow-container">
+            <img src="n1.jpeg" class="active">
+            <img src="n2.jpeg">
+            <img src="n3.jpeg">
+           
+            <img src="n5.jpeg">
+          
+        </div>
+       
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi4">
+     
+    
+        <div class="slideshow-container">
+            <img src="f1.jpeg" class="active">
+           
+            <img src="f3.jpeg">
+            
+            <img src="f5.jpeg">
+           
+        </div>
+        
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+
+    <section id="kupacikostimi5">
+        
+    
+        <div class="slideshow-container">
+            <img src="z1.jpeg" class="active">
+           
+            <img src="z3.jpeg">
+            
+            <img src="z5.jpeg">
+            
+        </div>
+        
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi6">
+        
+        <div class="slideshow-container">
+            <img src="o1.jpeg" class="active">
+            
+            <img src="o4.jpeg">
+            <img src="o5.jpeg">
+           
+            
+        </div>
+       
+        <p class="opis">Veličine: S, M, L,XL &nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi7">
+       
+    
+        <div class="slideshow-container">
+            <img src="k1.jpeg" class="active">
+            <img src="k2.jpeg">
+            <img src="k3.jpeg">
+            
+        </div>
+        
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi8">
+        
+    
+        <div class="slideshow-container">
+            <img src="kk1.jpeg" class="active">
+           
+            <img src="kk3.jpeg">
+            
+            
+        </div>
+       
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+
+    <section id="kupacikostimi9">
+        
+    
+        <div class="slideshow-container">
+            <img src="kkk1.jpeg" class="active">
+            <img src="kkk2.jpeg">
+            <img src="kkk3.jpeg">
+           
+            
+            <img src="kkk6.jpeg">
+            <img src="kkk7.jpeg">
+            
+            <img src="kkk9.jpeg">
+            
+            <img src="kkk11.jpeg">
+            
+            <img src="kkk13.jpeg">
+           
+
+            
+        </div>
+      
+        <p class="opis">Veličine: S, M, L, XL &nbsp;&nbsp;&nbsp;&nbsp;Cijena:35KM</p>
+    </section>
+    
+    <section id="kontakt">
+        <h2 class="section-title">Kontakt</h2>
+
+        <a href="https://www.instagram.com/mona_gajic97/" target="_blank" class="instagram-dugme">
+            Poruči putem Instagrama
+        </a>
+        <a href="https://wa.me/38765694804" target="_blank" class="whatsapp-dugme">
+            Poruči putem WhatsAppa
+        </a>
+        <a href="mailto:gajicmonika475@gmail.com" class="email-dugme">
+            Poruči putem e-maila
+        </a>
+
+    </section>
+
+   
+</body>
+</html>
+
+    
+   
