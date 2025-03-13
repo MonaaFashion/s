@@ -1,0 +1,322 @@
+
+body, p, a{
+    
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+header {
+    background:#FFA6C1 ;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center; /* Poravnanje po visini */
+    justify-content: space-between; /* Ravnomerno raspoređuje elemente */
+    padding: 10px 20px; /* Dodaće*/
+}
+
+
+
+h1 {
+    color: #2e2e2e;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-style: inherit;
+   /* text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);*/
+   /* margin-left: 20px;*/
+   margin: 0;
+}
+
+.logo {
+    max-width: 90px;
+    margin-bottom: 0px; /* Smanjeno sa 5px na 0px */
+}
+
+
+.menu-toggle {
+    font-size: 2em;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: gold;
+}
+
+.kontakt-dugme {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kontakt-dugme:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15x #f24e8f;
+}
+
+
+
+#pocetna {
+    background-image: url('slika.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #2a2727;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    transition: background 0.3s ease-in-out;
+}
+
+#pocetna:hover {
+    filter: brightness(0.9);
+}
+
+.instagram-dugme, .whatsapp-dugme, .email-dugme {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Instagram dugme */
+.instagram-dugme {
+    background: linear-gradient(45deg, #5c5c5a, #353433, #FFA6C1, #dad6dc, #f4f4f6);
+    color: white;
+}
+
+.instagram-dugme:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #f24e8f;
+}
+
+
+.email-dugme{
+    background: linear-gradient(45deg, #5c5c5a, #353433, #FFA6C1, #dad6dc, #f4f4f6);
+    color: white;
+}
+.email-dugme:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15x #f24e8f;
+}
+
+/* WhatsApp dugme */
+.whatsapp-dugme {
+    background: linear-gradient(45deg, #5c5c5a, #353433, #FFA6C1, #dad6dc, #f4f4f6);
+    color: white;
+}
+
+.whatsapp-dugme:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.8);
+}
+
+
+#kompleti, #narucivanje, #kontakt, #helanke, #topovi, #jakne, #kupacikostimi, #kombinezoni1 {
+    background: #111;
+    color: white;
+    padding: 50px 20px;
+}
+
+#kompleti {
+    background: #2e2e2e;
+}
+#helanke {
+    background:  #FFA6C1;
+}
+
+#topovi {
+    background: #2e2e2e;
+}
+
+#jakne {
+    background:  #2e2e2e;
+}
+
+
+
+
+
+
+#kupacikostimi {
+    background: #FFA6C1;
+}
+#narucivanje {
+    background: #FFA6C1 ;
+    color:#2e2e2e;
+    font-size: larger;
+}
+#kontakt a {
+    color: black; /* Postavlja crnu boju teksta */
+    text-decoration: none; /* Uklanja podvlačenje linkova */
+    font-weight: bold; /* Možeš dodati da bude podebljan */
+}
+
+.section-title {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Kada uđe u vidno polje */
+.section-title.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#kontakt a:hover {
+    color: #f24e8f; /* Tamnija nijansa crne kada pređe miš */
+}
+
+
+
+.active {
+    display: block !important;
+}
+#kontakt {
+    background: #FFA6C1;
+    color: white;
+    padding: 50px 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background:  #2e2e2e;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    nav.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.slideshow-container img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;  /* Skrivamo sve slike osim prve */
+}
+
+.slideshow-container img.active {
+    display: block;  /* Prikazujemo samo aktivnu sliku */
+}
+
+.opis {
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 10px;
+    
+
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.opis1 {
+    text-align: center;
+    font-size: 1.1em;
+    color:#2e2e2e;
+    margin-top: 10px;
+  
+
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#komplet1, #komplet2 , #komplet3, #komplet4, #komplet5, #komplet6, #komplet7, #komplet8, #komplet9, #komplet10{
+    background: #2e2e2e;
+    color: white;
+    padding: 50px 20px;
+}
+
+#helanke1, #helanke2, #helanke3, #helanke4, #helanke5, #helanke6 {
+    background: #FFA6C1;
+    color: #2e2e2e;
+    padding: 50px 20px;
+}
+
+#jakne1, #jakne2, #jakne3, #jakne4 {
+    background: #2e2e2e;
+    color: white;
+    padding: 50px 20px;
+   
+}
+
+#sorcevi, #sorcevi2{
+    background: #FFA6C1;
+    color: #2e2e2e;
+    padding: 50px 20px;
+   
+}
+
+
+#topovi1, #topovi2, #topovi3, #topovi4, #topovi5{
+     
+    background: #2e2e2e;
+    color: white;
+    padding: 50px 20px;
+}
+
+
+#kupacikostimi1, #kupacikostimi2, #kupacikostimi3, #kupacikostimi4, #kupacikostimi5,#kupacikostimi6, #kupacikostimi7, #kupacikostimi8, #kupacikostimi9{
+    background: #2e2e2e;
+    color: white;
+    padding: 50px 20px;
+   
+}
+
+#kombinezoni1, #kombinezoni2, #kombinezoni3, #kombinezoni4 {
+   
+    background: #FFA6C1;
+    color: #2e2e2e;
+    padding: 50px 20px;
+}
